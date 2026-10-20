@@ -29,7 +29,7 @@ a{color:#00785c}a:hover{color:#005c46}
 <img src="logo.svg" alt="Enduring Planet" style="height: 28px; width: auto">
 <div style="display: flex; align-items: center; gap: 16px">
 <span style="font-size: 12px; font-weight: 600; color: #1e3056; background: #eef1fb; border-radius: 6px; padding: 4px 10px">EP app · /email-confirmation</span>
-<a href="login.html?b=6ad75e7e" style="font-size: 14px; font-weight: 500; color: #5A6478">Log out</a>
+<a href="login.html?b=6ad76103" style="font-size: 14px; font-weight: 500; color: #5A6478">Log out</a>
 </div>
 </header>
 
@@ -42,18 +42,18 @@ a{color:#00785c}a:hover{color:#005c46}
 <h1 style="margin: 0; font-size: 24px; font-weight: 600; color: #1e3056">Verify your email to keep going</h1>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">Before you can open your application, we need to confirm <strong style="color: #1e3056; font-weight: 600">sam@solarcoop.example</strong> is yours. It takes under a minute and you won't lose any work.</p>
 </div>
-<a href="returning-verify.html?b=6ad75e7e" style="height: 48px; background: #01d5a4; border-radius: 4px; font-size: 15px; font-weight: 600; color: #1e3056; text-decoration: none; display: flex; align-items: center; justify-content: center">Email me a code</a>
+<a href="returning-verify.html?b=6ad76103" style="height: 48px; background: #01d5a4; border-radius: 4px; font-size: 15px; font-weight: 600; color: #1e3056; text-decoration: none; display: flex; align-items: center; justify-content: center">Email me a code</a>
 <ol style="margin: 0; padding: 16px 16px 16px 36px; background: #f6f8ff; border-radius: 8px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.5">
 <li>We email you a 6-digit code.</li>
 <li>You enter it on the next screen.</li>
 <li>You come straight back here.</li>
 </ol>
-<p style="margin: 0; padding-top: 16px; border-top: 1px solid #e3e7f2; font-size: 12px; line-height: 1.6; color: #6b7488">Wrong email address? <a href="login.html?b=6ad75e7e">Log out</a> and sign up with the right one.</p>
+<p style="margin: 0; padding-top: 16px; border-top: 1px solid #e3e7f2; font-size: 12px; line-height: 1.6; color: #6b7488">Wrong email address? <a href="login.html?b=6ad76103">Log out</a> and sign up with the right one.</p>
 </div>
 </main>
 
 </div>
-<details class="pnav"><summary>&#9776; Prototype screens</summary><div class="box"><h6>Overview</h6><a href="index.html?b=6ad75e7e">Flow overview</a><h6>New sign-up</h6><a href="signup.html?b=6ad75e7e">1 · Create account</a><a href="signup-password.html?b=6ad75e7e">2 · Set password</a><a href="verify-email.html?b=6ad75e7e">3 · Enter 6-digit code</a><a href="verified.html?b=6ad75e7e">4 · Email verified</a><h6>Returning users</h6><a href="login.html?b=6ad75e7e">Log in</a><a href="returning-verify.html?b=6ad75e7e">Existing unverified user · code at log-in</a><a href="code-states.html?b=6ad75e7e">Wrong, expired and resent code</a><h6>Email and safety net</h6><a href="email.html?b=6ad75e7e">Verification email</a><a href="app-fallback.html?b=6ad75e7e" class="on">In-app safety net</a><p class="note">Sample data. Nothing is saved.</p></div></details>
+<details class="pnav"><summary>&#9776; Prototype screens</summary><div class="box"><h6>Overview</h6><a href="index.html?b=6ad76103">Flow overview</a><h6>New sign-up</h6><a href="signup.html?b=6ad76103">1 · Create account</a><a href="signup-password.html?b=6ad76103">2 · Set password</a><a href="verify-email.html?b=6ad76103">3 · Enter 6-digit code</a><a href="verified.html?b=6ad76103">4 · Email verified</a><h6>Returning users</h6><a href="login.html?b=6ad76103">Log in · email</a><a href="login-password.html?b=6ad76103">Log in · password</a><a href="returning-verify.html?b=6ad76103">Existing unverified user · code at log-in</a><a href="code-states.html?b=6ad76103">Wrong, expired and resent code</a><h6>Email and safety net</h6><a href="email.html?b=6ad76103">Verification email</a><a href="app-fallback.html?b=6ad76103" class="on">In-app safety net</a><p class="note">Sample data. Nothing is saved.</p></div></details>
 <script>
 (function(){
 var t=document.createElement('div');t.className='toast';t.setAttribute('role','status');document.body.appendChild(t);var tt;
@@ -63,7 +63,7 @@ document.addEventListener('click',function(e){
  if(b){e.preventDefault();
   if(b.getAttribute('aria-label')==='Show password'){var i=b.parentNode.querySelector('input');if(i){i.type=i.type==='password'?'text':'password'}return}
   return toast(b.textContent.replace(/\s+/g,' ').trim()+': not part of this prototype')}
- var a=e.target.closest('a[href="#support"]');if(a){e.preventDefault();toast('Contact support: not part of this prototype')}
+ var a=e.target.closest('a[href="#support"],a[href="#reset"]');if(a){e.preventDefault();toast(a.textContent.trim()+': not part of this prototype')}
 });
 })();
 </script>
