@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Email verified · Verified sign-up prototype</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#00785c}a:hover{color:#005c46}
+</style>
+<style>
+.pnav{position:fixed;left:16px;bottom:16px;z-index:999;font:500 13px/1.3 Poppins,'Segoe UI',sans-serif}
+.pnav summary{list-style:none;background:#1e3056;color:#fff;padding:9px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);cursor:pointer}
+.pnav summary::-webkit-details-marker{display:none}
+.pnav .box{position:absolute;bottom:44px;left:0;background:#fff;border:1px solid #D7DCEA;border-radius:12px;box-shadow:0 14px 40px rgba(30,48,86,.2);padding:6px;width:330px;max-width:calc(100vw - 32px);max-height:70vh;overflow:auto;box-sizing:border-box}
+.pnav h6{margin:10px 12px 4px;font:600 10px/1 Poppins,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#6b7488}
+.pnav a{display:block;padding:7px 12px;border-radius:8px;color:#1e3056;text-decoration:none}.pnav a:hover,.pnav a.on{background:#e6fbf5;color:#00614a}
+.pnav .note{margin:8px 12px 6px;font-size:11.5px;color:#6b7488}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#1e3056;color:#fff;padding:11px 18px;border-radius:10px;font:500 13px Poppins,sans-serif;z-index:1000;opacity:0;transition:opacity .2s;pointer-events:none}.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #fafbff; font-family: Poppins, 'Segoe UI', sans-serif; color: #5A6478; display: flex; flex-direction: column">
+
+<header style="height: 72px; background: #ffffff; border-bottom: 1px solid #e3e7f2; box-sizing: border-box; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<img src="logo.svg" alt="Enduring Planet" style="height: 28px; width: auto">
+<span style="font-size: 12px; font-weight: 600; color: #1e3056; background: #eef1fb; border-radius: 6px; padding: 4px 10px">EP app · /login</span>
+</header>
+
+<main style="flex: 1; box-sizing: border-box; padding: 48px 24px; display: flex; align-items: center; justify-content: center">
+<div style="width: 100%; max-width: 440px; background: #ffffff; border: 1px solid #e3e7f2; border-radius: 20px; box-shadow: 0 20px 40px rgba(7, 69, 205, 0.08); box-sizing: border-box; padding: 44px 36px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<span style="width: 72px; height: 72px; border-radius: 50%; background: #01d5a4; display: flex; align-items: center; justify-content: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e3056" stroke-width="2.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #1e3056">Email verified</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.6">Welcome to Enduring Planet, Jane. Taking you to your application.</p>
+</div>
+<div role="progressbar" aria-label="Opening your application" style="width: 100%; height: 6px; background: #eef1fb; border-radius: 999px; overflow: hidden">
+<div style="width: 64%; height: 100%; background: #01d5a4; border-radius: 999px"></div>
+</div>
+<a href="index.html?b=6ad75d1d" style="width: 100%; height: 48px; background: #01d5a4; border-radius: 4px; font-size: 15px; font-weight: 600; color: #1e3056; text-decoration: none; display: flex; align-items: center; justify-content: center">Continue to application</a>
+<p style="margin: 0; font-size: 12px; color: #6b7488">Opens on its own in a moment.</p>
+</div>
+</main>
+
+</div>
+<details class="pnav"><summary>&#9776; Prototype screens</summary><div class="box"><h6>Overview</h6><a href="index.html?b=6ad75d1d">Flow overview</a><h6>New sign-up</h6><a href="signup.html?b=6ad75d1d">1 · Create account</a><a href="signup-password.html?b=6ad75d1d">2 · Set password</a><a href="verify-email.html?b=6ad75d1d">3 · Enter 6-digit code</a><a href="verified.html?b=6ad75d1d" class="on">4 · Email verified</a><h6>Returning users</h6><a href="login.html?b=6ad75d1d">Log in</a><a href="returning-verify.html?b=6ad75d1d">Existing unverified user · code at log-in</a><a href="code-states.html?b=6ad75d1d">Wrong, expired and resent code</a><h6>Email and safety net</h6><a href="email.html?b=6ad75d1d">Verification email</a><a href="app-fallback.html?b=6ad75d1d">In-app safety net</a><p class="note">Sample data. Nothing is saved.</p></div></details>
+<script>
+(function(){
+var t=document.createElement('div');t.className='toast';t.setAttribute('role','status');document.body.appendChild(t);var tt;
+function toast(m){t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('on')},2200)}
+document.addEventListener('click',function(e){
+ var b=e.target.closest('button');
+ if(b){e.preventDefault();
+  if(b.getAttribute('aria-label')==='Show password'){var i=b.parentNode.querySelector('input');if(i){i.type=i.type==='password'?'text':'password'}return}
+  return toast(b.textContent.replace(/\s+/g,' ').trim()+': not part of this prototype')}
+ var a=e.target.closest('a[href="#support"]');if(a){e.preventDefault();toast('Contact support: not part of this prototype')}
+});
+})();
+</script>
+</body>
+</html>
